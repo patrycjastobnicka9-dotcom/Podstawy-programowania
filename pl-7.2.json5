@@ -978,10 +978,13 @@
 //   "browse.previous.button": "Previous",
   "browse.previous.button": "Previous",
 
+//   "browse.startsWith.choose_start": "(Choose start)",
   "browse.startsWith.choose_start": "(Choose start)",
 
+//   "browse.startsWith.choose_year": "(Choose year)",
   "browse.startsWith.choose_year": "(Choose year)",
 
+//   "browse.startsWith.choose_year.label": "Choose the issue year",
   "browse.startsWith.choose_year.label": "Choose the issue year",
 
 //   "browse.startsWith.jump": "Jump to a point in the index:",
@@ -1032,10 +1035,13 @@
 //   "browse.startsWith.submit": "Browse",
   "browse.startsWith.submit": "Browse",
 
+//   "browse.startsWith.type_date": "Or type in a date (year-month) and click 'Browse'",
   "browse.startsWith.type_date": "Or type in a date (year-month) and click 'Browse'",
 
+//   "browse.startsWith.type_date.label": "Or type in a date (year-month) and click on the Browse button",
   "browse.startsWith.type_date.label": "Or type in a date (year-month) and click on the Browse button",
 
+//   "browse.startsWith.type_text": "Type the first few letters and click on the Browse button",
   "browse.startsWith.type_text": "Type the first few letters and click on the Browse button",
 
 //   "browse.title": "Browsing {{ collection }} by {{ field }} {{ value }}",
@@ -1224,10 +1230,13 @@
 //   "collection.edit.tabs.source.form.oaiSource": "OAI Provider",
   "collection.edit.tabs.source.form.oaiSource": "OAI Provider",
 
+//   "collection.edit.tabs.source.form.options.harvestType.METADATA_AND_BITSTREAMS": "Harvest metadata and bitstreams (requires ORE support)",
   "collection.edit.tabs.source.form.options.harvestType.METADATA_AND_BITSTREAMS": "Harvest metadata and bitstreams (requires ORE support)",
 
+//   "collection.edit.tabs.source.form.options.harvestType.METADATA_AND_REF": "Harvest metadata and references to bitstreams (requires ORE support)",
   "collection.edit.tabs.source.form.options.harvestType.METADATA_AND_REF": "Harvest metadata and references to bitstreams (requires ORE support)",
 
+//   "collection.edit.tabs.source.form.options.harvestType.METADATA_ONLY": "Harvest metadata only",
   "collection.edit.tabs.source.form.options.harvestType.METADATA_ONLY": "Harvest metadata only",
 
 //   "collection.edit.tabs.source.head": "Content Source",
@@ -1572,16 +1581,22 @@
 //   "comcol-role.edit.submitters.description": "The E-People and Groups that have permission to submit new items to this collection.",
   "comcol-role.edit.submitters.description": "The E-People and Groups that have permission to submit new items to this collection.",
 
+//   "comcol-role.edit.item_read.name": "Default item read access",
   "comcol-role.edit.item_read.name": "Default item read access",
 
+//   "comcol-role.edit.item_read.description": "E-People and Groups that can read new items submitted to this collection. Changes to this role are not retroactive. Existing items in the system will still be viewable by those who had read access at the time of their addition.",
   "comcol-role.edit.item_read.description": "E-People and Groups that can read new items submitted to this collection. Changes to this role are not retroactive. Existing items in the system will still be viewable by those who had read access at the time of their addition.",
 
+//   "comcol-role.edit.item_read.anonymous-group": "Default read for incoming items is currently set to Anonymous.",
   "comcol-role.edit.item_read.anonymous-group": "Default read for incoming items is currently set to Anonymous.",
 
+//   "comcol-role.edit.bitstream_read.name": "Default bitstream read access",
   "comcol-role.edit.bitstream_read.name": "Default bitstream read access",
 
+//   "comcol-role.edit.bitstream_read.description": "Community administrators can create sub-communities or collections, and manage or assign management for those sub-communities or collections. In addition, they decide who can submit items to any sub-collections, edit item metadata (after submission), and add (map) existing items from other collections (subject to authorization).",
   "comcol-role.edit.bitstream_read.description": "Community administrators can create sub-communities or collections, and manage or assign management for those sub-communities or collections. In addition, they decide who can submit items to any sub-collections, edit item metadata (after submission), and add (map) existing items from other collections (subject to authorization).",
 
+//   "comcol-role.edit.bitstream_read.anonymous-group": "Default read for incoming bitstreams is currently set to Anonymous.",
   "comcol-role.edit.bitstream_read.anonymous-group": "Default read for incoming bitstreams is currently set to Anonymous.",
 
 //   "comcol-role.edit.editor.name": "Editors",
@@ -2247,6 +2262,7 @@
 //   "info.feedback.info": "Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!",
   "info.feedback.info": "Thanks for sharing your feedback about the DSpace system. Your comments are appreciated!",
 
+//   "info.feedback.email_help": "This address will be used to follow up on your feedback.",
   "info.feedback.email_help": "This address will be used to follow up on your feedback.",
 
 //   "info.feedback.send": "Send Feedback",
@@ -3366,66 +3382,94 @@
 //   "menu.header.admin.description": "Management menu",
   "menu.header.admin.description": "Management menu",
 
+//   "menu.section.access_control": "Access Control",
   "menu.section.access_control": "Access Control",
 
+//   "menu.section.access_control_authorizations": "Authorizations",
   "menu.section.access_control_authorizations": "Authorizations",
 
+//   "menu.section.access_control_groups": "Groups",
   "menu.section.access_control_groups": "Groups",
 
+//   "menu.section.access_control_people": "People",
   "menu.section.access_control_people": "People",
 
+//   "menu.section.admin_search": "Admin Search",
   "menu.section.admin_search": "Admin Search",
 
+//   "menu.section.browse_community": "This Community",
   "menu.section.browse_community": "This Community",
 
+//   "menu.section.browse_community_by_author": "By Author",
   "menu.section.browse_community_by_author": "By Author",
 
+//   "menu.section.browse_community_by_issue_date": "By Issue Date",
   "menu.section.browse_community_by_issue_date": "By Issue Date",
 
+//   "menu.section.browse_community_by_title": "By Title",
   "menu.section.browse_community_by_title": "By Title",
 
+//   "menu.section.browse_global": "All of DSpace",
   "menu.section.browse_global": "All of DSpace",
 
+//   "menu.section.browse_global_by_author": "By Author",
   "menu.section.browse_global_by_author": "By Author",
 
+//   "menu.section.browse_global_by_dateissued": "By Issue Date",
   "menu.section.browse_global_by_dateissued": "By Issue Date",
 
+//   "menu.section.browse_global_by_subject": "By Subject",
   "menu.section.browse_global_by_subject": "By Subject",
 
+//   "menu.section.browse_global_by_title": "By Title",
   "menu.section.browse_global_by_title": "By Title",
 
+//   "menu.section.browse_global_communities_and_collections": "Communities & Collections",
   "menu.section.browse_global_communities_and_collections": "Communities & Collections",
 
+//   "menu.section.control_panel": "Control Panel",
   "menu.section.control_panel": "Control Panel",
 
+//   "menu.section.curation_task": "Curation Task",
   "menu.section.curation_task": "Curation Task",
 
 //   "menu.section.edit": "Edit",
   "menu.section.edit": "Edit",
 
+//   "menu.section.edit_collection": "Collection",
   "menu.section.edit_collection": "Collection",
 
+//   "menu.section.edit_community": "Community",
   "menu.section.edit_community": "Community",
 
+//   "menu.section.edit_item": "Item",
   "menu.section.edit_item": "Item",
 
 //   "menu.section.export": "Export",
   "menu.section.export": "Export",
 
+//   "menu.section.export_collection": "Collection",
   "menu.section.export_collection": "Collection",
 
+//   "menu.section.export_community": "Community",
   "menu.section.export_community": "Community",
 
+//   "menu.section.export_item": "Item",
   "menu.section.export_item": "Item",
 
+//   "menu.section.export_metadata": "Metadata",
   "menu.section.export_metadata": "Metadata",
 
+//   "menu.section.icon.access_control": "Access Control menu section",
   "menu.section.icon.access_control": "Access Control menu section",
 
+//   "menu.section.icon.admin_search": "Admin search menu section",
   "menu.section.icon.admin_search": "Admin search menu section",
 
+//   "menu.section.icon.control_panel": "Control Panel menu section",
   "menu.section.icon.control_panel": "Control Panel menu section",
 
+//   "menu.section.icon.curation_tasks": "Curation Task menu section",
   "menu.section.icon.curation_tasks": "Curation Task menu section",
 
 //   "menu.section.icon.edit": "Edit menu section",
@@ -3452,6 +3496,7 @@
 //   "menu.section.icon.registries": "Registries menu section",
   "menu.section.icon.registries": "Registries menu section",
 
+//   "menu.section.icon.statistics_task": "Statistics Task menu section",
   "menu.section.icon.statistics_task": "Statistics Task menu section",
 
 //   "menu.section.icon.workflow": "Administer workflow menu section",
@@ -3463,21 +3508,28 @@
 //   "menu.section.import": "Import",
   "menu.section.import": "Import",
 
+//   "menu.section.import_batch": "Batch Import (ZIP)",
   "menu.section.import_batch": "Batch Import (ZIP)",
 
+//   "menu.section.import_metadata": "Metadata",
   "menu.section.import_metadata": "Metadata",
 
 //   "menu.section.new": "New",
   "menu.section.new": "New",
 
+//   "menu.section.new_collection": "Collection",
   "menu.section.new_collection": "Collection",
 
+//   "menu.section.new_community": "Community",
   "menu.section.new_community": "Community",
 
+//   "menu.section.new_item": "Item",
   "menu.section.new_item": "Item",
 
+//   "menu.section.new_item_version": "Item Version",
   "menu.section.new_item_version": "Item Version",
 
+//   "menu.section.new_process": "Process",
   "menu.section.new_process": "Process",
 
 //   "menu.section.pin": "Pin sidebar",
@@ -3492,19 +3544,25 @@
 //   "menu.section.registries": "Registries",
   "menu.section.registries": "Registries",
 
+//   "menu.section.registries_format": "Format",
   "menu.section.registries_format": "Format",
 
+//   "menu.section.registries_metadata": "Metadata",
   "menu.section.registries_metadata": "Metadata",
 
 //   "menu.section.statistics": "Statistics",
   "menu.section.statistics": "Statistics",
 
+//   "menu.section.statistics_task": "Statistics Task",
   "menu.section.statistics_task": "Statistics Task",
 
+//   "menu.section.toggle.access_control": "Toggle Access Control section",
   "menu.section.toggle.access_control": "Toggle Access Control section",
 
+//   "menu.section.toggle.control_panel": "Toggle Control Panel section",
   "menu.section.toggle.control_panel": "Toggle Control Panel section",
 
+//   "menu.section.toggle.curation_task": "Toggle Curation Task section",
   "menu.section.toggle.curation_task": "Toggle Curation Task section",
 
 //   "menu.section.toggle.edit": "Toggle Edit section",
@@ -3525,6 +3583,7 @@
 //   "menu.section.toggle.registries": "Toggle Registries section",
   "menu.section.toggle.registries": "Toggle Registries section",
 
+//   "menu.section.toggle.statistics_task": "Toggle Statistics Task section",
   "menu.section.toggle.statistics_task": "Toggle Statistics Task section",
 
 //   "menu.section.workflow": "Administer Workflow",
@@ -4401,6 +4460,7 @@
 //   "search.filters.applied.f.entityType": "Item Type",
   "search.filters.applied.f.entityType": "Item Type",
 
+//   "search.filters.applied.f.has_content_in_original_bundle": "Has files",
   "search.filters.applied.f.has_content_in_original_bundle": "Has files",
 
 //   "search.filters.applied.f.itemtype": "Type",
@@ -4526,6 +4586,7 @@
 //   "search.filters.filter.expand": "Expand filter",
   "search.filters.filter.expand": "Expand filter",
 
+//   "search.filters.filter.has_content_in_original_bundle.head": "Has files",
   "search.filters.filter.has_content_in_original_bundle.head": "Has files",
 
 //   "search.filters.filter.itemtype.head": "Type",
@@ -4642,8 +4703,10 @@
 //   "search.filters.entityType.OrgUnit": "Organizational Unit",
   "search.filters.entityType.OrgUnit": "Organizational Unit",
 
+//   "search.filters.has_content_in_original_bundle.true": "Yes",
   "search.filters.has_content_in_original_bundle.true": "Yes",
 
+//   "search.filters.has_content_in_original_bundle.false": "No",
   "search.filters.has_content_in_original_bundle.false": "No",
 
 //   "search.filters.discoverable.true": "No",
@@ -4670,6 +4733,7 @@
 //   "search.form.search": "Search",
   "search.form.search": "Search",
 
+//   "search.form.search_dspace": "All repository",
   "search.form.search_dspace": "All repository",
 
 //   "search.form.scope.all": "All of DSpace",
@@ -4798,6 +4862,7 @@
 //   "submission.general.cancel": "Cancel",
   "submission.general.cancel": "Cancel",
 
+//   "submission.general.cannot_submit": "You have not the privilege to make a new submission.",
   "submission.general.cannot_submit": "You have not the privilege to make a new submission.",
 
 //   "submission.general.deposit": "Deposit",
@@ -4932,8 +4997,10 @@
 //   "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal": "Import remote journal",
   "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal": "Import remote journal",
 
+//   "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal Issue": "Import remote journal issue",
   "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal Issue": "Import remote journal issue",
 
+//   "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal Volume": "Import remote journal volume",
   "submission.sections.describe.relationship-lookup.external-source.import-button-title.Journal Volume": "Import remote journal volume",
 
 //   "submission.sections.describe.relationship-lookup.external-source.import-button-title.isProjectOfPublication": "Project",
@@ -5005,16 +5072,22 @@
 //   "submission.sections.describe.relationship-lookup.external-source.import-modal.Journal.added.new-entity": "Successfully imported and added external journal to the selection",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.Journal.added.new-entity": "Successfully imported and added external journal to the selection",
 
+//   "submission.sections.describe.relationship-lookup.external-source.import-modal.Journal Issue.title": "Import Remote Journal Issue",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.Journal Issue.title": "Import Remote Journal Issue",
 
+//   "submission.sections.describe.relationship-lookup.external-source.import-modal.Journal Issue.added.local-entity": "Successfully added local journal issue to the selection",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.Journal Issue.added.local-entity": "Successfully added local journal issue to the selection",
 
+//   "submission.sections.describe.relationship-lookup.external-source.import-modal.Journal Issue.added.new-entity": "Successfully imported and added external journal issue to the selection",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.Journal Issue.added.new-entity": "Successfully imported and added external journal issue to the selection",
 
+//   "submission.sections.describe.relationship-lookup.external-source.import-modal.Journal Volume.title": "Import Remote Journal Volume",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.Journal Volume.title": "Import Remote Journal Volume",
 
+//   "submission.sections.describe.relationship-lookup.external-source.import-modal.Journal Volume.added.local-entity": "Successfully added local journal volume to the selection",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.Journal Volume.added.local-entity": "Successfully added local journal volume to the selection",
 
+//   "submission.sections.describe.relationship-lookup.external-source.import-modal.Journal Volume.added.new-entity": "Successfully imported and added external journal volume to the selection",
   "submission.sections.describe.relationship-lookup.external-source.import-modal.Journal Volume.added.new-entity": "Successfully imported and added external journal volume to the selection",
 
 //   "submission.sections.describe.relationship-lookup.external-source.import-modal.select": "Select a local match:",
@@ -5180,6 +5253,7 @@
 //   "submission.sections.describe.relationship-lookup.title.DataFile": "Data Files",
   "submission.sections.describe.relationship-lookup.title.DataFile": "Data Files",
 
+//   "submission.sections.describe.relationship-lookup.title.Funding Agency": "Funding Agency",
   "submission.sections.describe.relationship-lookup.title.Funding Agency": "Funding Agency",
 
 //   "submission.sections.describe.relationship-lookup.title.isFundingOfPublication": "Funding",
@@ -5302,12 +5376,16 @@
 //   "submission.sections.general.collection": "Collection",
   "submission.sections.general.collection": "Collection",
 
+//   "submission.sections.general.deposit_error_notice": "There was an issue when submitting the item, please try again later.",
   "submission.sections.general.deposit_error_notice": "There was an issue when submitting the item, please try again later.",
 
+//   "submission.sections.general.deposit_success_notice": "Submission deposited successfully.",
   "submission.sections.general.deposit_success_notice": "Submission deposited successfully.",
 
+//   "submission.sections.general.discard_error_notice": "There was an issue when discarding the item, please try again later.",
   "submission.sections.general.discard_error_notice": "There was an issue when discarding the item, please try again later.",
 
+//   "submission.sections.general.discard_success_notice": "Submission discarded successfully.",
   "submission.sections.general.discard_success_notice": "Submission discarded successfully.",
 
 //   "submission.sections.general.metadata-extracted": "New metadata have been extracted and added to the <strong>{{sectionId}}</strong> section.",
@@ -5322,13 +5400,16 @@
 //   "submission.sections.general.no-sections": "No options available",
   "submission.sections.general.no-sections": "No options available",
 
+//   "submission.sections.general.save_error_notice": "There was an issue when saving the item, please try again later.",
   "submission.sections.general.save_error_notice": "There was an issue when saving the item, please try again later.",
 
+//   "submission.sections.general.save_success_notice": "Submission saved successfully.",
   "submission.sections.general.save_success_notice": "Submission saved successfully.",
 
 //   "submission.sections.general.search-collection": "Search for a collection",
   "submission.sections.general.search-collection": "Search for a collection",
 
+//   "submission.sections.general.sections_not_valid": "There are incomplete sections.",
   "submission.sections.general.sections_not_valid": "There are incomplete sections.",
 
 //   "submission.sections.submit.progressbar.accessCondition": "Item access conditions",
@@ -5550,11 +5631,13 @@
 //   "submission.workflow.tasks.claimed.approve": "Approve",
   "submission.workflow.tasks.claimed.approve": "Approve",
 
+//   "submission.workflow.tasks.claimed.approve_help": "If you have reviewed the item and it is suitable for inclusion in the collection, select \"Approve\".",
   "submission.workflow.tasks.claimed.approve_help": "If you have reviewed the item and it is suitable for inclusion in the collection, select \"Approve\".",
 
 //   "submission.workflow.tasks.claimed.edit": "Edit",
   "submission.workflow.tasks.claimed.edit": "Edit",
 
+//   "submission.workflow.tasks.claimed.edit_help": "Select this option to change the item's metadata.",
   "submission.workflow.tasks.claimed.edit_help": "Select this option to change the item's metadata.",
 
 //   "submission.workflow.tasks.claimed.reject.reason.info": "Please enter your reason for rejecting the submission into the box below, indicating whether the submitter may fix a problem and resubmit.",
@@ -5572,11 +5655,13 @@
 //   "submission.workflow.tasks.claimed.reject.submit": "Reject",
   "submission.workflow.tasks.claimed.reject.submit": "Reject",
 
+//   "submission.workflow.tasks.claimed.reject_help": "If you have reviewed the item and found it is <strong>not</strong> suitable for inclusion in the collection, select \"Reject\".  You will then be asked to enter a message indicating why the item is unsuitable, and whether the submitter should change something and resubmit.",
   "submission.workflow.tasks.claimed.reject_help": "If you have reviewed the item and found it is <strong>not</strong> suitable for inclusion in the collection, select \"Reject\".  You will then be asked to enter a message indicating why the item is unsuitable, and whether the submitter should change something and resubmit.",
 
 //   "submission.workflow.tasks.claimed.return": "Return to pool",
   "submission.workflow.tasks.claimed.return": "Return to pool",
 
+//   "submission.workflow.tasks.claimed.return_help": "Return the task to the pool so that another user may perform the task.",
   "submission.workflow.tasks.claimed.return_help": "Return the task to the pool so that another user may perform the task.",
 
 //   "submission.workflow.tasks.generic.error": "Error occurred during operation...",
@@ -5594,6 +5679,7 @@
 //   "submission.workflow.tasks.pool.claim": "Claim",
   "submission.workflow.tasks.pool.claim": "Claim",
 
+//   "submission.workflow.tasks.pool.claim_help": "Assign this task to yourself.",
   "submission.workflow.tasks.pool.claim_help": "Assign this task to yourself.",
 
 //   "submission.workflow.tasks.pool.hide-detail": "Hide detail",
