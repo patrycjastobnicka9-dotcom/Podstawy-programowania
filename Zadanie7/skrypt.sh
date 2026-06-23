@@ -1,107 +1,87 @@
 #!/bin/bash
 
-OUTPUT_DIR="zdjecia_robocze"
-ZIP_OUT="galeria_zadanie.zip"
+rm -rf zdjecia_robocze
+mkdir -p zdjecia_robocze
 
-# Czyszczenie śmieci przed startem
-rm -rf "$OUTPUT_DIR"
-rm -f "$ZIP_OUT"
-mkdir -p "$OUTPUT_DIR"
+unzip -q -o kopie-1.zip -d zdjecia_robocze
+unzip -q -o kopie-2.zip -d zdjecia_robocze
 
-# 1. Rozpakowanie paczek głównych od Natalii
-if [ -f "kopie-1.zip" ]; then
-    unzip -q "kopie-1.zip" -d "$OUTPUT_DIR"
-fi
+cd zdjecia_robocze
 
-if [ -f "kopie-2.zip" ]; then
-    unzip -q "kopie-2.zip" -d "$OUTPUT_DIR"
-fi
+find . -type f -name "*.zip" | while read -r belka_zip; do
+    unzip -q -o "$belka_zip"
+    rm -f "$belka_zip"
+done
 
-# 2. ROZPAKOWANIE ZIPÓW W ZIPIE (tych wewnętrznych z plikami)
-cd "$OUTPUT_DIR" || exit
-for wewnętrzny_zip in *.zip; do
-    if [ -f "$wewnętrzny_zip" ]; then
-        unzip -q "$wewnętrzny_zip"
-        rm -f "$wewnętrzny_zip"
+find . -mindepth 2 -type f -exec mv {} . \; 2>/dev/null
+find . -type d -not -name "." -exec rm -rf {} \; 2>/dev/null
+
+for plik in *; do
+    if [ -f "$plik" ]; then
+        rozszerzenie="${plik##*.}"
+        rozszerzenie_lower=$(echo "$rozszerzenie" | tr 'A-Z' 'a-z')
+        nazwa_bazowa="${plik%.*}"
+        
+        if [ "$rozszerzenie_lower" = "sh" ] || [ "$rozszerzenie_lower" = "zip" ] || [ "$rozszerzenie_lower" = "html" ] || [ "$rozszerzenie_lower" = "css" ]; then
+            continue
+        fi
+
+        mv "$plik" "${nazwa_bazowa}.jpg" 2>/dev/null
     fi
 done
-cd ..
 
-HTML_FILE="$OUTPUT_DIR/index.html"
-
-# 3. Generowanie idealnego układu PIONOWEGO (tak jak na zdjęciach)
-cat <<EOF > "$HTML_FILE"
+# Generowanie czystego szablonu A4 pionowo (2 kolumny x 4 wiersze)
+cat << 'HTML_HEADER' > index.html
 <!DOCTYPE html>
-<html lang="pl">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeria</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .gallery-container {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            max-width: 600px;
-            width: 100%;
-        }
-        .photo-block {
-            background: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            text-align: center;
-        }
-        .photo-block img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 4px;
-        }
-        .photo-title {
-            margin-top: 10px;
-            font-weight: bold;
-            color: #555;
-        }
-    </style>
+<meta charset="UTF-8">
+<style>
+  body { margin: 0; padding: 0; background-color: #FAFAFA; }
+  .page { width: 210mm; height: 297mm; padding: 15mm; margin: 10mm auto; background: white; box-sizing: border-box; }
+  .grid-container { display: table; width: 100%; height: 100%; border-collapse: separate; border-spacing: 10mm; }
+  .grid-row { display: table-row; }
+  .grid-item { display: table-cell; width: 50%; vertical-align: top; text-align: center; border: 1px solid #ccc; padding: 5px; background: #f9f9f9; }
+  .grid-item img { max-width: 100%; height: 45mm; object-fit: contain; display: block; margin: 0 auto 5px auto; }
+  .desc { font-family: Arial, sans-serif; font-size: 11pt; color: #333; word-break: break-all; }
+</style>
 </head>
 <body>
-    <h1>Galeria</h1>
-    <div class="gallery-container">
-EOF
+<div class="page">
+  <div class="grid-container">
+HTML_HEADER
 
-# Szukanie wszystkich odpakowanych zdjęć i wrzucanie ich pionowo
-cd "$OUTPUT_DIR" || exit
-for plik in *.{jpg,jpeg,png,JPG,JPEG,PNG}; do
-    if [ -f "$plik" ]; then
-        cat <<EOF >> "index.html"
-        <div class="photo-block">
-            <img src="$plik" alt="$plik">
-            <div class="photo-title">$plik</div>
-        </div>
-EOF
+licznik=0
+for foto in *.jpg; do
+    if [ -f "$foto" ] && [ $licznik -lt 8 ]; then
+        if [ $((licznik % 2)) -eq 0 ]; then
+            echo "    <div class=\"grid-row\">" >> index.html
+        fi
+        cat << HTML_BLOCK >> index.html
+      <div class="grid-item">
+        <img src="$foto">
+        <div class="desc">$foto</div>
+      </div>
+HTML_BLOCK
+        if [ $((licznik % 2)) -eq 1 ]; then
+            echo "    </div>" >> index.html
+        fi
+        licznik=$((licznik + 1))
     fi
 done
-cd ..
 
-cat <<EOF >> "$HTML_FILE"
-    </div>
+if [ $((licznik % 2)) -eq 1 ]; then
+    echo "    </div>" >> index.html
+fi
+
+cat << 'HTML_FOOTER' >> index.html
+  </div>
+</div>
 </body>
 </html>
-EOF
+HTML_FOOTER
 
-# 4. Pakowanie gotowego pionowego HTML i zdjęć do jednego lekkiego ZIP-a
-zip -r "$ZIP_OUT" "$OUTPUT_DIR"
-
-# 5. SPRZĄTANIE: Usuwamy ciężki folder roboczy, żeby nie ważył na dysku!
-rm -rf "$OUTPUT_DIR"
-
-echo "Done!"
+echo "Sukces: Dokument A4 (2x4) zostal wygenerowany!"
+cd ..
+zip -q -r gotowe_zdjecia.zip zdjecia_robocze/
+echo "Wszystkie zadania zakonczone!"
